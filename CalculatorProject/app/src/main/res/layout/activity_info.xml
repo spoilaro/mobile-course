@@ -10,23 +10,37 @@
         android:id="@+id/imageView"
         android:layout_width="86dp"
         android:layout_height="75dp"
-        app:srcCompat="@android:drawable/ic_menu_info_details"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="88dp" />
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="232dp" />
+        android:layout_width="325dp"
+        android:layout_height="129dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="26dp"
+        android:text="@string/info_text"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="347dp" />
+        android:layout_marginBottom="236dp"
+        android:onClick="goBack"
+        android:text="@string/back_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
